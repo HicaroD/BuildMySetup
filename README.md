@@ -3,13 +3,13 @@ A simple Go application to set up my development environment quickly on Arch, so
 
 ## Progress 
 
-- [] Update system (`sudo pacman -Syu` for updating the system. See [Partial upgrades are supported](https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported))
-- [] Install all necessary packages / apps (Zsh + OhMyZsh, Neovim, Rust, Python)
-- [] Configure Git (Username, e-mail, core editor and more)
-- [] Configure Neovim ([`dotfiles-neovim`](https://github.com/HicaroD/dotfiles-neovim) to `~/.config/nvim`)
-- [] Install all Neovim plugins ([`vim-plug`](https://github.com/junegunn/vim-plug))
-- [] Download my personal notes (It's on a private repository) and paste into `~/Documents/` directory
-- [] Append custom aliases to `~/.zshrc`
+- [ ] Update system (`sudo pacman -Syu` for updating the system. See [Partial upgrades are supported](https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported))
+- [ ] Install all necessary packages / apps (Zsh + OhMyZsh, Neovim, Rust, Python)
+- [ ] Configure Git (Username, e-mail, core editor and more)
+- [ ] Configure Neovim ([`dotfiles-neovim`](https://github.com/HicaroD/dotfiles-neovim) to `~/.config/nvim`)
+- [ ] Install all Neovim plugins ([`vim-plug`](https://github.com/junegunn/vim-plug))
+- [ ] Download my personal notes (It's on a private repository) and paste into `~/Documents/` directory
+- [ ] Append custom aliases to `~/.zshrc`
 
 ## License
 BuildMySetup is licensed under the MIT license. See [LICENSE](LICENSE).
