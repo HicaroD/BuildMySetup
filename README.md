@@ -4,7 +4,7 @@
 ## Progress 
 
 - [ ] Update system (`sudo pacman -Syu` for updating the system. See [Partial upgrades are unsupported](https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported))
-- [ ] Install all necessary packages / apps (Zsh + OhMyZsh, Neovim, Rust, Python)
+- [ ] Install all necessary packages / apps (Zsh + Oh My Zsh, Neovim, Rust, Python)
 - [ ] Configure Git (Username, e-mail, core editor and more)
 - [ ] Configure Neovim ([`dotfiles-neovim`](https://github.com/HicaroD/dotfiles-neovim) to `~/.config/nvim`)
 - [ ] Install all Neovim plugins ([`vim-plug`](https://github.com/junegunn/vim-plug))
