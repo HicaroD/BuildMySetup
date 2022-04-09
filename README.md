@@ -1,5 +1,5 @@
 # BuildMySetup
-:wrench: A simple Bash script to set up my own development environment quickly, so I don't need to do it manually.
+:wrench: A simple Python script to set up my own development environment quickly, so I don't need to do it manually.
 
 ## Progress 
 
