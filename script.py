@@ -31,19 +31,19 @@ class Builder:
     @staticmethod
     # Credits: https://stackoverflow.com/questions/16694907/download-large-file-in-python-with-requests#16696317
     def download_file(url):
-        local_filename = url.split('/')[-1]
+        local_filename = url.split("/")[-1]
         with requests.get(url, stream=True) as r:
             r.raise_for_status()
-            with open(local_filename, 'wb') as f:
+            with open(local_filename, "wb") as f:
                 for chunk in r.iter_content(chunk_size=8192):
                     f.write(chunk)
         return local_filename
 
     @staticmethod
     def install_golang():
-        go_tarfile_name = 'go1.18.linux-amd64.tar.gz'
-        go_directory = '/usr/local/go'
-        go_url = 'https://go.dev/dl/go1.18.linux-amd64.tar.gz'
+        go_tarfile_name = "go1.18.linux-amd64.tar.gz"
+        go_directory = "/usr/local/go"
+        go_url = "https://go.dev/dl/go1.18.linux-amd64.tar.gz"
 
         print(f"Downloading Go from {go_url}")
 
@@ -56,8 +56,8 @@ class Builder:
 
         if os.path.exists(go_tarfile_name):
             print("Extracting Go tarball on /usr/local")
-            go_tarfile = tarfile.open(go_tarfile_name, 'r|*')
-            go_tarfile.extractall(path='/usr/local')
+            go_tarfile = tarfile.open(go_tarfile_name, "r|*")
+            go_tarfile.extractall(path="/usr/local")
             go_tarfile.close()
             os.remove(go_tarfile_name)
         else:
