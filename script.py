@@ -66,8 +66,8 @@ class Builder:
 
     @staticmethod
     def run():
-        #Builder.update_system()
-        #Builder.install_base_packages()
+        Builder.update_system()
+        Builder.install_base_packages()
         Builder.install_golang()
 
 
