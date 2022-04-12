@@ -68,11 +68,23 @@ class Builder:
         system("curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh")
 
     @staticmethod
+    def configure_git():
+        print("Configuring Git")
+        email = input("Enter e-mail: ")
+        system(f'git config --global user.email "{email}"')
+
+        username = input("Enter username: ")
+        system(f'git config --global user.name "{username}"')
+
+        system(f'git config --global core.editor "neovim"')
+
+    @staticmethod
     def run():
         Builder.update_system()
         Builder.install_base_packages()
         Builder.install_golang()
         Builder.install_rust()
+        Builder.configure_git()
 
 
 def main():
