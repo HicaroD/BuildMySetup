@@ -45,9 +45,8 @@ class Builder:
         go_directory = "/usr/local/go"
         go_url = "https://go.dev/dl/go1.18.linux-amd64.tar.gz"
 
-        print(f"Downloading Go from {go_url}")
-
         if not os.path.exists(go_tarfile_name):
+            print(f"Downloading Go from {go_url}")
             Builder.download_file(go_url)
 
         if os.path.exists(go_directory):
