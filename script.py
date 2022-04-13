@@ -90,7 +90,7 @@ class Builder:
         if os.path.exists(neovim_dotfiles_path):
             if not os.path.exists(neovim_folder_configuration):
                 print("Creating Neovim folder")
-                os.mkdir()
+                os.mkdir(neovim_folder_configuration)
 
             os.rename(neovim_dotfiles_path, neovim_folder_configuration + "init.vim")
             shutil.rmtree("dotfiles-neovim")
@@ -101,11 +101,11 @@ class Builder:
 
     @staticmethod
     def run():
-        Builder.update_system()
-        Builder.install_base_packages()
-        Builder.install_golang()
-        Builder.install_rust()
-        Builder.configure_git()
+        #Builder.update_system()
+        #Builder.install_base_packages()
+        #Builder.install_golang()
+        #Builder.install_rust()
+        #Builder.configure_git()
         Builder.configure_neovim()
 
 
