@@ -79,12 +79,34 @@ class Builder:
         system(f'git config --global core.editor "neovim"')
 
     @staticmethod
+    def configure_neovim():
+        print("Configuring Neovim")
+
+        system(f"git clone {DOTFILES_URL}")
+
+        neovim_dotfiles_path = "dotfiles-neovim/init.vim"
+        neovim_folder_configuration = os.path.expanduser("~") + "/.config/nvim"
+
+        if os.path.exists(neovim_dotfiles_path):
+            if not os.path.exists(neovim_folder_configuration):
+                print("Creating Neovim folder")
+                os.mkdir()
+
+            os.rename(neovim_dotfiles_path, neovim_folder_configuration + "init.vim")
+            shutil.rmtree("dotfiles-neovim")
+
+        else:
+            print("dotfiles-neovim folder not found")
+            exit()
+
+    @staticmethod
     def run():
         Builder.update_system()
         Builder.install_base_packages()
         Builder.install_golang()
         Builder.install_rust()
         Builder.configure_git()
+        Builder.configure_neovim()
 
 
 def main():
