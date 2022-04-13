@@ -106,6 +106,11 @@ class Builder:
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'")
 
     @staticmethod
+    def get_personal_notes():
+        print("Downloading personal notes")
+        system(f"git clone {NOTES_URL} " + os.path.expanduser("~") + "/Documents/Notes")
+
+    @staticmethod
     def run():
         Builder.update_system()
         Builder.install_base_packages()
@@ -114,6 +119,7 @@ class Builder:
         Builder.configure_git()
         Builder.configure_neovim()
         Builder.configure_neovim_plugins()
+        Builder.get_personal_notes()
 
 
 def main():
