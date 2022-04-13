@@ -100,13 +100,20 @@ class Builder:
             exit()
 
     @staticmethod
+    def configure_neovim_plugins():
+        # Vim-plug
+        system("sh -c 'curl -fLo \"${XDG_DATA_HOME:-$HOME/.local/share}\"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'")
+
+    @staticmethod
     def run():
-        #Builder.update_system()
-        #Builder.install_base_packages()
-        #Builder.install_golang()
-        #Builder.install_rust()
-        #Builder.configure_git()
+        Builder.update_system()
+        Builder.install_base_packages()
+        Builder.install_golang()
+        Builder.install_rust()
+        Builder.configure_git()
         Builder.configure_neovim()
+        Builder.configure_neovim_plugins()
 
 
 def main():
