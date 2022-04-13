@@ -8,7 +8,7 @@
 - [x] Configure Git (Username, e-mail, core editor and more)
 - [x] Configure Neovim ([`dotfiles-neovim`](https://github.com/HicaroD/dotfiles-neovim) to `~/.config/nvim`)
 - [x] Install all Neovim plugins ([`vim-plug`](https://github.com/junegunn/vim-plug))
-- [ ] Download my personal notes (It's on a private repository) and paste into `~/Documents/` directory
+- [x] Download my personal notes (It's on a private repository) and paste into `~/Documents/` directory
 - [ ] Append custom aliases to `~/.zshrc`
 
 ## License
