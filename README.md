@@ -9,7 +9,7 @@
 - [x] Configure Neovim ([`dotfiles-neovim`](https://github.com/HicaroD/dotfiles-neovim) to `~/.config/nvim`)
 - [x] Install all Neovim plugins ([`vim-plug`](https://github.com/junegunn/vim-plug))
 - [x] Download my personal notes (It's on a private repository) and paste into `~/Documents/` directory
-- [ ] Append custom aliases to `~/.zshrc`
+- [x] Append custom aliases to `~/.zshrc`
 
 ## License
 BuildMySetup is licensed under the MIT license. See [LICENSE](LICENSE).

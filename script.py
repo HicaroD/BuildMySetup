@@ -6,6 +6,7 @@ from os import system
 
 NOTES_URL = "https://github.com/HicaroD/Notes"
 DOTFILES_URL = "https://github.com/HicaroD/dotfiles-neovim"
+HOME_PATH = os.path.expanduser("~")
 
 
 class Builder:
@@ -108,7 +109,19 @@ class Builder:
     @staticmethod
     def get_personal_notes():
         print("Downloading personal notes")
-        system(f"git clone {NOTES_URL} " + os.path.expanduser("~") + "/Documents/Notes")
+        system(f"git clone {NOTES_URL} " + + "/Documents/Notes")
+
+    @staticmethod
+    def append_aliases_to_zshrc():
+        zshrc_file_path = HOME_PATH + "/.zshrc"
+        if os.path.exists(zshrc_file_path):
+            print("Appending aliases to .zshrc")
+            with open(zshrc_file_path, "a") as zshrc_file:
+                zshrc_file.write("alias notes=\"nvim ~/Documents/Notes/\"\n")
+                zshrc_file.write("alias vimrc=\"nvim ~/.config/nvim/init.vim\"")
+        else:
+            print(".zshrc doesn't exist!")
+            exit()
 
     @staticmethod
     def run():
@@ -120,6 +133,7 @@ class Builder:
         Builder.configure_neovim()
         Builder.configure_neovim_plugins()
         Builder.get_personal_notes()
+        Builder.append_aliases_to_zshrc()
 
 
 def main():
