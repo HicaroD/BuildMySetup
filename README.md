@@ -7,7 +7,7 @@
 - [x] Install all necessary packages / apps (Git, Zsh + [Oh My Zsh](https://ohmyz.sh/#install), [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim), [Rust](https://www.rust-lang.org/tools/install), [Python](https://www.python.org/downloads/), [Go](https://go.dev/dl/))
 - [x] Configure Git (Username, e-mail, core editor and more)
 - [x] Configure Neovim ([`dotfiles-neovim`](https://github.com/HicaroD/dotfiles-neovim) to `~/.config/nvim`)
-- [ ] Install all Neovim plugins ([`vim-plug`](https://github.com/junegunn/vim-plug))
+- [x] Install all Neovim plugins ([`vim-plug`](https://github.com/junegunn/vim-plug))
 - [ ] Download my personal notes (It's on a private repository) and paste into `~/Documents/` directory
 - [ ] Append custom aliases to `~/.zshrc`
 
