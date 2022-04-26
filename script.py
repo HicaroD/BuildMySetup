@@ -78,6 +78,7 @@ class Builder:
         system(f'git config --global user.name "{username}"')
 
         system(f'git config --global core.editor "neovim"')
+        system(f'git config --global commit.verbose true')
 
     @staticmethod
     def configure_neovim():
