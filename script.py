@@ -5,7 +5,7 @@ import requests
 from os import system
 
 NOTES_URL = "https://github.com/HicaroD/Notes"
-DOTFILES_URL = "https://github.com/HicaroD/dotfiles-neovim"
+DOTFILES_URL = "https://github.com/HicaroD/dotfiles"
 HOME_PATH = os.path.expanduser("~")
 
 
@@ -86,7 +86,7 @@ class Builder:
 
         system(f"git clone {DOTFILES_URL}")
 
-        neovim_dotfiles_path = "dotfiles-neovim/init.vim"
+        neovim_dotfiles_path = "dotfiles/init.vim"
         neovim_folder_configuration = os.path.expanduser("~") + "/.config/nvim"
 
         if os.path.exists(neovim_dotfiles_path):
@@ -95,10 +95,10 @@ class Builder:
                 os.mkdir(neovim_folder_configuration)
 
             os.rename(neovim_dotfiles_path, neovim_folder_configuration + "init.vim")
-            shutil.rmtree("dotfiles-neovim")
+            shutil.rmtree("dotfiles")
 
         else:
-            print("dotfiles-neovim folder not found")
+            print("dotfiles folder not found")
             exit()
 
     @staticmethod
